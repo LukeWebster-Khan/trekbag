@@ -16,7 +16,7 @@ export const useItemsStore = create(
           return { items: [...state.items, newItem] };
         });
       },
-      deleteItem: (id) => {
+      handleDeleteItem: (id) => {
         set((state) => {
           const newItems = state.items.filter((item) => item.id !== id);
           return { items: newItems };
